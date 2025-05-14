@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExpressWay - Fastest Delivery Service</title>
+  <meta name="description" content="ExpressWay - Lightning-fast delivery services including express, overnight, and same-day options with real-time tracking." />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+    a {
+      text-decoration: none;
+    }
+    .expressway-header {
+      background-color: #ffcc00;
+      color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .expressway-links a {
+      color: #000;
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      margin-left: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .expressway-links a:hover {
+      background-color: #f1f1f1;
+    }
+    .hero {
+      background: #222;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero-content h1 {
+      font-size: 5rem;
+      color: #ffcc00;
+      text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+      margin: 0;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    .cta-btn {
+      padding: 15px 30px;
+      background-color: #ffcc00;
+      color: black;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+    .cta-btn:hover {
+      background-color: #ffb300;
+    }
+    .info-box {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .info-box a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #000;
+      color: #ffcc00;
+      border-radius: 5px;
+    }
+    .services {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #111;
+    }
+    .services h2 {
+      font-size: 3.5rem;
+      color: #ffcc00;
+      margin-bottom: 40px;
+    }
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #222;
+      padding: 40px;
+      border-radius: 15px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card h3 {
+      margin: 20px 0;
+      font-size: 2.5rem;
+      color: #ffcc00;
+    }
+    .card p {
+      font-size: 1.2rem;
+    }
+    .card:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.5);
+    }
+    .contact {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      color: #ffcc00;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      padding: 15px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 15px;
+      background-color: #ffcc00;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffb300;
+    }
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #ffcc00;
+    }
+    @media screen and (max-width: 768px) {
+      .expressway-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+      .expressway-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      .expressway-links a {
+        font-size: 1rem;
+        margin: 5px 0;
+        padding: 10px;
+        text-align: center;
+      }
+      .hero {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+      .cta-btn {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+        width: 100%;
+      }
+      .services h2 {
+        font-size: 2.5rem;
+      }
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+      form {
+        width: 90%;
+      }
+      input, textarea, button {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="expressway-header">
+    <div class="expressway-logo">Express Way</div>
+    <nav class="expressway-links">
+      <a href="#services">Features</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>DELIVERED AT THE SPEED OF LIGHT</h1>
+      <p>We ensure the fastest delivery with real-time tracking and guaranteed precision.</p>
+      <a href="#services" class="cta-btn">Explore Our Services</a>
+    </div>
+  </section>
+
+  <div class="info-box">
+    Delivery available in Tirupathi, Anantapur. <br>
+    <a href="tel:9392490686">Call us at 9392490686</a>
+  </div>
+
+  <section class="services" id="services">
+    <h2>Our Delivery Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Express Delivery</h3>
+        <p>Get your packages delivered within hours. First delivery just ₹200!</p>
+        <button onclick="openBooking()">Book Now</button>
+      </div>
+      <div class="card">
+        <h3>Overnight Delivery</h3>
+        <p>Guaranteed overnight delivery to major cities. First delivery just ₹200!</p>
+        <button onclick="openBooking()">Book Now</button>
+      </div>
+      <div class="card">
+        <h3>Same Day Delivery</h3>
+        <p>For the fastest and most urgent deliveries. First delivery just ₹200!</p>
+        <button onclick="openBooking()">Book Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Book Your Delivery</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="from" placeholder="From Address" required />
+      <input type="text" name="to" placeholder="Delivery Address" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 ExpressWay Delivery Services. <a href="#">Privacy Policy</a></p>
+  </footer>
+  <script>
+  function openBooking() {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        const payload = {
+          name: formData.get("name"),
+          from: formData.get("from"),
+          to: formData.get("to"),
+          phone: formData.get("phone"),
+        };
+
+        fetch("http://localhost:3000/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        })
+          .then((res) => {
+            if (!res.ok) throw new Error("Server error");
+            return res.json();
+          })
+          .then(() => {
+            alert("Request sent successfully!");
+            form.reset();
+            document.getElementById('contact').style.display = 'none';
+          })
+          .catch((err) => {
+            console.error("Error submitting form:", err);
+            alert("Error sending request. Please try again later.");
+          });
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
